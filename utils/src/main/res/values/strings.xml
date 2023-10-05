@@ -1,0 +1,14 @@
+<resources>
+    <string name="dialog_bt_version_cancel">关闭</string>
+
+    <string name="dialog_connect_time_tip">保持连接</string>
+    <string name="dialog_connect_time_1h">1小时后</string>
+    <string name="dialog_connect_time_2h">2小时后</string>
+    <string name="dialog_connect_time_3h">3小时后</string>
+    <string name="dialog_connect_time_4h">4小时后</string>
+    <string name="dialog_connect_time_5h">5小时后</string>
+
+    <string name="dialog_edit_text_cancel">取消</string>
+    <string name="dialog_edit_text_confirm">确定</string>
+    <string name="dialog_edit_text_destroy">销毁</string>
+</resources>

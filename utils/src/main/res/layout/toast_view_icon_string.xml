@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_rectangle_black">
+
+    <ImageView
+        android:id="@+id/toast_view_icon_string_icon"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_36"
+        android:layout_marginLeft="@dimen/dp_36"
+        android:src="@drawable/icon_success">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/toast_view_icon_string_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:textSize="@dimen/dp_14"
+        android:layout_gravity="center_horizontal"
+        android:text="读取成功"
+        android:textColor="@color/white_70"
+        />
+</LinearLayout>

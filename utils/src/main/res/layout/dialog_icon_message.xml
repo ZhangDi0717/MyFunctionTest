@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_120"
+    android:layout_height="@dimen/dp_120"
+    xmlns:hikcision="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_rectangle_black"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+    <com.zhangdi.utils.dialog.RoundProgressBarWidthNumber
+        android:id="@+id/dialog_icon_message_progress"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_gravity="center_horizontal"
+        android:progress="0"
+        hikcision:progress_reached_bar_height="@dimen/dp_4"
+        hikcision:progress_unreached_bar_height="@dimen/dp_5"
+        hikcision:progress_text_color="@color/white_70"
+        hikcision:progress_text_size="@dimen/dp_14"
+        hikcision:progress_unreached_color="@color/black_37"
+        hikcision:progress_reached_color="@color/white_70"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/dp_14"
+        android:textColor="@color/white_70"
+        android:text="升级中.."/>
+</LinearLayout>

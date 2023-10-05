@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginRight="@dimen/dp_16"
+    android:gravity="center"
+    android:background="@drawable/rectangle_white_8"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_message_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:textSize="@dimen/dp_18"
+        android:textColor="@color/black_90"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/dialog_message_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textSize="@dimen/dp_14"
+        android:textColor="@color/black_40"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_24"
+        android:background="@color/black_12"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/dialog_message_cancel"
+            android:layout_height="match_parent"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/dp_16"
+            android:textColor="@color/blue_theme"
+            android:text="@string/dialog_edit_text_cancel"/>
+
+        <View
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="match_parent"
+            android:background="@color/black_12"/>
+        <TextView
+            android:id="@+id/dialog_message_destroy"
+            android:layout_height="match_parent"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/dp_16"
+            android:textColor="@color/red_worming"
+            android:text="@string/dialog_edit_text_destroy"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

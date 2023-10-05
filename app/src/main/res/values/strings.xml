@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MyFunctionTest</string>
+    <string name="app_label">Compass</string>
+    <string name="getting_location">Getting location...</string>
+    <string name="cannot_get_location">Cannot get your location</string>
+    <string name="location_north">%s N</string>
+    <string name="location_south">%s S</string>
+    <string name="location_east">%s E</string>
+    <string name="location_west">%s W</string>
+
+    <!-- 指南针测试 -->
+    <string name="compass">指南针</string>
+    <string name="is_compass_ok">指南针测试结果是否正常？</string>
+    <string name="compass_test_notice">需要甩动校准</string>
+</resources>
