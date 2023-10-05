@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.zhangdi.myfunctiontest.compass.Compass3Activity;
 import com.zhangdi.myfunctiontest.eventbus.EventBusFirActivity;
+import com.zhangdi.myfunctiontest.fingerprint.FingerPrintActivity;
 import com.zhangdi.myfunctiontest.jni.JNIActivity;
 import com.zhangdi.myfunctiontest.sim.SimActivity;
 import com.zhangdi.myfunctiontest.toast.ToastActivity;
@@ -47,7 +48,7 @@ import java.util.Enumeration;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BasePermissionActivity {
     private static final String TAG = "MainActivity";
     private Context mContext;
     private List<String> mList;
@@ -62,6 +63,20 @@ public class MainActivity extends AppCompatActivity {
         if (!EventBus.getDefault().isRegistered(this)){
             EventBus.getDefault().register(this);
         }
+
+        request(new OnPermissionsResult() {
+            @Override
+            public void OnSuccess() {
+                Log.d(TAG, "OnSuccess: ");
+            }
+
+            @Override
+            public void OnFail(List<String> noPermissions) {
+                for (int i = 0; noPermissions!=null && i < noPermissions.size(); i++) {
+                    Log.d(TAG, "OnFail: permission = "+noPermissions.get(i));
+                }
+            }
+        });
         mContext = this;
         initData();
         initView();
@@ -330,6 +345,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add("加载图片");
         mList.add("EventBus的多activity响应");
         mList.add("EventBusc测试");
+        mList.add("指纹");
     }
     /**
      * 获取文件内容
@@ -412,6 +428,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 7:
                        EventBus.getDefault().post(new MessageEvent(R.layout.activity_main,1));
+                       break;
+                   case 8:
+                       startActivity(new Intent(mContext, FingerPrintActivity.class));
                        break;
                 }
             }

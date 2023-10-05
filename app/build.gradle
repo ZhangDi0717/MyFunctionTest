@@ -49,6 +49,10 @@ android {
         }
     }
 
+    dataBinding{
+        enabled = true
+    }
+
 
 
 }
@@ -59,6 +63,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation files('libs\\fsls_tool_gt_DataBinding.jar')
+    implementation files('libs\\gsls_tool_gt.jar')
+    implementation files('libs\\gsls_tool.jar')
     //implementation project(path: ':utils')
 
     compileOnly files('libs\\framework.jar')
@@ -66,4 +73,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     api 'org.greenrobot:eventbus:3.0.0'
+
+
+//    implementation 'com.github.1079374315:GSLS_Tool:v1.4.4.9'
 }
