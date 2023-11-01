@@ -21,13 +21,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.zhangdi.myfunctiontest.camera.CameraActivity;
 import com.zhangdi.myfunctiontest.compass.Compass3Activity;
 import com.zhangdi.myfunctiontest.eventbus.EventBusFirActivity;
 import com.zhangdi.myfunctiontest.fingerprint.FingerPrintActivity;
 import com.zhangdi.myfunctiontest.jni.JNIActivity;
 import com.zhangdi.myfunctiontest.sim.SimActivity;
+import com.zhangdi.myfunctiontest.sound.SoundActivity;
 import com.zhangdi.myfunctiontest.toast.ToastActivity;
 import com.zhangdi.myfunctiontest.toast.ToastUtil;
+import com.zhangdi.myfunctiontest.touch.TouchActivity;
 
 
 import org.greenrobot.eventbus.EventBus;
@@ -346,6 +349,11 @@ public class MainActivity extends BasePermissionActivity {
         mList.add("EventBus的多activity响应");
         mList.add("EventBusc测试");
         mList.add("指纹");
+        mList.add("相机");
+        mList.add("preferences");
+        mList.add("java语法");
+        mList.add("音频");
+        mList.add("触屏");
     }
     /**
      * 获取文件内容
@@ -432,6 +440,18 @@ public class MainActivity extends BasePermissionActivity {
                    case 8:
                        startActivity(new Intent(mContext, FingerPrintActivity.class));
                        break;
+                   case 9:
+                       startActivity(new Intent(mContext, CameraActivity.class));
+                       break;
+                    case 11:
+                        startActivity(new Intent(mContext, JavaActivity.class));
+                        break;
+                    case 12:
+                        startActivity(new Intent(mContext, SoundActivity.class));
+                        break;
+                    case 13:
+                        startActivity(new Intent(mContext, TouchActivity.class));
+                        break;
                 }
             }
 
@@ -459,5 +479,6 @@ public class MainActivity extends BasePermissionActivity {
         if (EventBus.getDefault().isRegistered(this)){
             EventBus.getDefault().unregister(this);
         }
+
     }
 }

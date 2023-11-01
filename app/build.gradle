@@ -66,6 +66,7 @@ dependencies {
     implementation files('libs\\fsls_tool_gt_DataBinding.jar')
     implementation files('libs\\gsls_tool_gt.jar')
     implementation files('libs\\gsls_tool.jar')
+    implementation 'androidx.preference:preference:1.2.0'
     //implementation project(path: ':utils')
 
     compileOnly files('libs\\framework.jar')
