@@ -38,7 +38,9 @@ public class BasePermissionActivity extends AppCompatActivity {
     private String[] mStrPermission = new String[]{
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.READ_PHONE_STATE,
-            Manifest.permission.USE_BIOMETRIC
+            Manifest.permission.USE_BIOMETRIC,
+            Manifest.permission.RECORD_AUDIO,
+            Manifest.permission.CAMERA
     };
 
     //保存没有同意的权限
