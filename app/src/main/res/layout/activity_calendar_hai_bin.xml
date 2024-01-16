@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calendar.CalendarHaiBinActivity">
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2023年5月"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickL"
+            android:text="l"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickR"
+            android:text="r"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll">
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:month_view="com.zhangdi.myfunctiontest.calendar.HikRangeMonthView"
+            app:current_month_text_color="@color/black_text"
+            app:selected_theme_color="@color/blue_theme"
+            app:selected_text_color="@color/white"
+            app:week_line_margin="@dimen/dp_1"
+            app:max_select_range="7"
+            app:week_line_background="#0F000000"
+            app:week_bar_height="@dimen/dp_40"
+            app:calendar_height="@dimen/dp_48" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="@dimen/dp_167"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="a"/>
+        
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:text="确定"
+            android:background="@color/blue_theme"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

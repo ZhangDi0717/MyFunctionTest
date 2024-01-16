@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyLibrary</string>
+    <string name="dialog_edit_text_cancel">取消</string>
+    <string name="dialog_edit_text_destroy">销毁</string>
+    <string name="dialog_edit_text_confirm">确定</string>
+    <string name="dialog_connect_time_1h">1小时后</string>
+
+</resources>

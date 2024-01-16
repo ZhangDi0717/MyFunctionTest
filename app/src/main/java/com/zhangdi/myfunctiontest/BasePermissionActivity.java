@@ -40,7 +40,8 @@ public class BasePermissionActivity extends AppCompatActivity {
             Manifest.permission.READ_PHONE_STATE,
             Manifest.permission.USE_BIOMETRIC,
             Manifest.permission.RECORD_AUDIO,
-            Manifest.permission.CAMERA
+            Manifest.permission.CAMERA,
+            Manifest.permission.MODIFY_PHONE_STATE
     };
 
     //保存没有同意的权限

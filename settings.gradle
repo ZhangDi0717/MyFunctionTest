@@ -1,19 +1,21 @@
 pluginManagement {
     repositories {
-        google()
-        mavenCentral()
-
-        gradlePluginPortal()
+        maven {allowInsecureProtocol = true; url 'http://af-proxy.hikvision.com.cn:80/artifactory/google/'}
+        maven {allowInsecureProtocol = true; url "http://af-proxy.hikvision.com.cn:80/artifactory/maven-aliyun-gradle-plugin-remote/"}
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
-        mavenCentral()
+        maven {allowInsecureProtocol = true; url "http://af-proxy.hikvision.com.cn:80/artifactory/google/"}
+        maven {allowInsecureProtocol = true; url "http://af-proxy.hikvision.com.cn:80/artifactory/maven-jcenter-proxy/"}
+        maven {allowInsecureProtocol = true; url "http://af-proxy.hikvision.com.cn:80/artifactory/central/"}
+        maven {allowInsecureProtocol = true; url "http://af.hikvision.com.cn:80/artifactory/maven-down/"}
         maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "MyFunctionTest"
 include ':app'
 include ':utils'
+include ':remoteservice'
+include ':mylibrary'

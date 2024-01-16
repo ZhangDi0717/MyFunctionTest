@@ -10,11 +10,16 @@ android {
         applicationId "com.zhangdi.myfunctiontest"
         minSdk 26
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
-
+        versionCode 1001
+        versionName "1.0.01"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        jumboMode = true
+    }
+
 
 
     buildTypes {
@@ -53,7 +58,9 @@ android {
         enabled = true
     }
 
-
+    buildFeatures {
+        aidl true
+    }
 
 }
 
@@ -67,6 +74,8 @@ dependencies {
     implementation files('libs\\gsls_tool_gt.jar')
     implementation files('libs\\gsls_tool.jar')
     implementation 'androidx.preference:preference:1.2.0'
+    implementation project(path: ':mylibrary')
+
     //implementation project(path: ':utils')
 
     compileOnly files('libs\\framework.jar')
@@ -75,6 +84,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     api 'org.greenrobot:eventbus:3.0.0'
 
+    implementation files('libs/poi-3.12-android-a.jar')
+    implementation files('libs/poi-ooxml-schemas-3.12-20150511-a.jar')
+
 
 //    implementation 'com.github.1079374315:GSLS_Tool:v1.4.4.9'
+    implementation 'com.github.hdev0225:CalendarView:v1.0.6'//gdev-日历
+    implementation 'com.haibin:calendarview:3.7.1'
+    implementation "androidx.multidex:multidex:2.0.1"
 }

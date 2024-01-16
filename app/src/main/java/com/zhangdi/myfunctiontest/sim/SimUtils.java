@@ -1,5 +1,8 @@
 package com.zhangdi.myfunctiontest.sim;
 
+import static androidx.core.content.PermissionChecker.checkSelfPermission;
+
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -9,6 +12,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.PermissionChecker;
 
 public class SimUtils {
     private static final String TAG = SimUtils.class.getSimpleName();
@@ -47,7 +51,9 @@ public class SimUtils {
         final SubscriptionManager subscriptionManager = SubscriptionManager.from(mContext);
         subscriptionManager.setDefaultDataSubId(subscriptionInfo.getSubscriptionId());
         tm.setDataEnabled(true);
-
+        if (checkSelfPermission(mContext,Manifest.permission.MODIFY_PHONE_STATE) != PermissionChecker.PERMISSION_GRANTED) {
+            return false;
+        }
         if(!tm.isDataEnabled()){
             Log.d(TAG, "onBackgroundMessage: 启动数据失败 : "+slotId);
             return false;

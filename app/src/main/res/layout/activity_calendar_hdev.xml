@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calendar.CalendarHDevActivity">
+
+
+    <com.hdev.calendar.view.RangeCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_365"
+        android:background="#ffffff"
+        app:header_view="com.hdev.calendar.view.DefaultRangeHeaderView"
+        app:selected_bg_color="#1784F9"
+        app:selected_end_bg_color="@color/blue_theme"
+        app:selected_end_day_color="@color/white"
+        app:selected_range_bg_color="@color/blue_theme_unselect"
+        app:selected_range_day_color="@color/black"
+        app:selected_start_bg_color="@color/blue_theme"
+        app:selected_start_day_color="@color/white"
+        app:first_day_of_week="7"
+        app:week_title_label="日、一、二、三、四、五、六"
+        tools:ignore="MissingClass" />
+
+
+
+</LinearLayout>

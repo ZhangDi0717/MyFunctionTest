@@ -21,11 +21,19 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.zhangdi.myfunctiontest.broadcast.BroadcastActivity;
+import com.zhangdi.myfunctiontest.calendar.CalendarHaiBinActivity;
 import com.zhangdi.myfunctiontest.camera.CameraActivity;
 import com.zhangdi.myfunctiontest.compass.Compass3Activity;
+import com.zhangdi.myfunctiontest.dialog.DialogActivity;
 import com.zhangdi.myfunctiontest.eventbus.EventBusFirActivity;
+import com.zhangdi.myfunctiontest.excel.ExcelActivity;
 import com.zhangdi.myfunctiontest.fingerprint.FingerPrintActivity;
+import com.zhangdi.myfunctiontest.input.InputActivity;
 import com.zhangdi.myfunctiontest.jni.JNIActivity;
+import com.zhangdi.myfunctiontest.json.JSONActivity;
+import com.zhangdi.myfunctiontest.seekbar.SeekBarActivity;
+import com.zhangdi.myfunctiontest.service.ServiceActivity;
 import com.zhangdi.myfunctiontest.sim.SimActivity;
 import com.zhangdi.myfunctiontest.sound.SoundActivity;
 import com.zhangdi.myfunctiontest.toast.ToastActivity;
@@ -354,6 +362,14 @@ public class MainActivity extends BasePermissionActivity {
         mList.add("java语法");
         mList.add("音频");
         mList.add("触屏");
+        mList.add("excel");
+        mList.add("seekBar");
+        mList.add("日历");
+        mList.add("dialog");
+        mList.add("service");
+        mList.add("输入框");
+        mList.add("广播");
+        mList.add("fastjson");
     }
     /**
      * 获取文件内容
@@ -452,6 +468,29 @@ public class MainActivity extends BasePermissionActivity {
                     case 13:
                         startActivity(new Intent(mContext, TouchActivity.class));
                         break;
+                    case 14:
+                        startActivity(new Intent(mContext, ExcelActivity.class));
+                        break;
+                    case 15:
+                        startActivity(new Intent(mContext, SeekBarActivity.class));
+                        break;
+                    case 16:
+                        startActivity(new Intent(mContext, CalendarHaiBinActivity.class));
+                        break;
+                    case 17:
+                        startActivity(new Intent(mContext, DialogActivity.class));
+                        break;
+                    case 18:
+                        startActivity(new Intent(mContext, ServiceActivity.class));
+                        break;
+                    case 19:
+                        startActivity(new Intent(mContext, InputActivity.class));
+                        break;
+                    case 20:
+                        startActivity(new Intent(mContext, BroadcastActivity.class));
+                        break;
+                    case 21:
+                        startActivity(new Intent(mContext, JSONActivity.class));
                 }
             }
 

@@ -15,4 +15,8 @@ public class MessageEvent {
         this.action = action;
         this.what = what;
     }
+
+    public MessageEvent(int what) {
+        this.what = what;
+    }
 }
