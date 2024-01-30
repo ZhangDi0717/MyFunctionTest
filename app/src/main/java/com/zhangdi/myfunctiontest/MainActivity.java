@@ -39,6 +39,7 @@ import com.zhangdi.myfunctiontest.sound.SoundActivity;
 import com.zhangdi.myfunctiontest.toast.ToastActivity;
 import com.zhangdi.myfunctiontest.toast.ToastUtil;
 import com.zhangdi.myfunctiontest.touch.TouchActivity;
+import com.zhangdi.myfunctiontest.view.DrawSelfView;
 
 
 import org.greenrobot.eventbus.EventBus;
@@ -370,6 +371,7 @@ public class MainActivity extends BasePermissionActivity {
         mList.add("输入框");
         mList.add("广播");
         mList.add("fastjson");
+        mList.add("view绘制");
     }
     /**
      * 获取文件内容
@@ -491,6 +493,10 @@ public class MainActivity extends BasePermissionActivity {
                         break;
                     case 21:
                         startActivity(new Intent(mContext, JSONActivity.class));
+                        break;
+                    case 22:
+                        startActivity(new Intent(mContext, DrawSelfView.class));
+                        break;
                 }
             }
 

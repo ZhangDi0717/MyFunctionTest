@@ -37,17 +37,20 @@
         android:theme="@style/Theme.MyFunctionTest"
         tools:targetApi="31">
         <activity
+            android:name=".view.PersonViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.DrawSelfView"
+            android:exported="false" />
+        <activity
             android:name=".input.InputActivity"
             android:exported="false" />
         <activity
             android:name=".broadcast.BroadcastActivity"
             android:exported="false" />
-
         <activity
             android:name=".json.JSONActivity"
             android:exported="false" />
-
-
         <activity
             android:name=".service.ServiceActivity"
             android:exported="false" />

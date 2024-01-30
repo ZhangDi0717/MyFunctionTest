@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * author: zhangdi45
@@ -61,6 +62,11 @@ public class ExcelActivity extends BaseAppcompat {
                 filePath = filePath + excelFileName;
                 excelManager.saveListBeanToExcel(filePath,students);
                 break;
+            case 1:
+                String vision = "DS-MDT201/4&64/5G/M";;
+                Map<String,String> map = ExcelPoiUtils.readStringMapFromFile(mContext, "factory_test_item.xlsx", vision);
+                break;
+
         }
     }
 }

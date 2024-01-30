@@ -27,7 +27,7 @@ import java.util.List;
  * Date: 13:57 2023/11/2
  */
 public abstract class BaseAppcompat extends AppCompatActivity {
-    private Context mContext;
+    protected Context mContext;
     private HomeAdapter mHomeAdaper;
     private RecyclerView mRecyclerView;
     private StaggeredHomeAdapter mStaggeredHomeAdapter;
